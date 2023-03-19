@@ -28,6 +28,7 @@ if(feedback){
 populateFormData();
 
 form.addEventListener('submit', (event) => {
+console.log(feedback);
 event.preventDefault();
 localStorage.removeItem("feedback-form-state")
 form.email.value = '';
