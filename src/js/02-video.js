@@ -7,9 +7,11 @@ let time = 0;
 const handleTimeupdate = (ev) => {
     time = ev.seconds;
     localStorage.setItem("videoplayer-current-time", time);
-    console.log(time);
 };
 player.on('timeupdate', throttle(handleTimeupdate, 1000));
-player.setCurrentTime(localStorage.getItem("videoplayer-current-time"))
+if(localStorage.getItem("videoplayer-current-time")){
+    player.setCurrentTime(localStorage.getItem("videoplayer-current-time"))
+
+}
 
 

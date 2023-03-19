@@ -14,7 +14,6 @@ if(target.value){
 
 localStorage.setItem("feedback-form-state", JSON.stringify(data))
 feedback = JSON.parse(localStorage.getItem("feedback-form-state"));
-console.log(feedback)
 };
 
 form.addEventListener('input', throttle(handleFormInput, 500) );
